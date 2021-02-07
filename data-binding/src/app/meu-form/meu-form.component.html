@@ -1,0 +1,170 @@
+<section style="margin:1px;">
+<!--
+    <article>
+        <h3>Interpoloção</h3>
+        <p>String renderizada com a Interpoloção: {{ url }}</p>
+        <p>Resultado de 1 + 1:  {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+        <p>Gosto do curso angular {{ cursoAngular && getCurtirCurso() }}</p>
+    </article>
+
+    <hr>
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}"> 
+        <img [src]="urlImagem"> 
+        <img bind-src="urlImagem"/> 
+    </article>
+-->
+    <!-- quando o elemento não tem propriedade, exemplo o colspan se usa [attr.colspan] -->
+
+<!--
+    <hr>
+    <article>
+        <h3>Class Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #vClasse (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <div class="alert " role="alert" [class.alert-success]="vClasse.value == 'alert-success'">
+                Sucesso
+            </div>
+            <div class="alert " role="alert" [class.alert-info]="vClasse.value == 'alert-info'">
+                Info
+            </div>
+            <div class="alert " role="alert" [class.alert-warning]="vClasse.value == 'alert-warning'">
+                Alerta
+            </div>
+            <div class="alert " role="alert" [class.alert-danger]="vClasse.value == 'alert-danger'">
+                Erro
+            </div>
+
+            <br>
+            <div class={{vClasse.value}} role="alert">
+                Texto colorido conforme select do combo...
+            </div>
+ 
+
+        </div>
+    </article>
+
+    <hr>
+    <article>
+        <h3>Style Binding</h3>
+        <div class="alert alert-success" role="alert" [style.display]="vClasse.value == 'alert-success' ? 'block' : 'none'">
+            1 Somente aparecer em caso de {{vClasse.value}} (Usando style binding...)
+        </div>
+        <div class="alert alert-info" role="alert" [style.display]="vClasse.value == 'alert-info' ? 'block' : 'none'">
+            2 Somente aparecer em caso de {{vClasse.value}} (Usando style binding...)
+        </div>
+        <div class="alert alert-warning" role="alert" [style.display]="vClasse.value == 'alert-warning' ? 'block' : 'none'">
+            3 Somente aparecer em caso de {{vClasse.value}} (Usando style binding...)
+        </div>
+        <div class="alert alert-danger" role="alert" [style.display]="vClasse.value == 'alert-danger' ? 'block' : 'none'">
+            4 Somente aparecer em caso de {{vClasse.value}} (Usando style binding...)
+        </div>
+    </article>
+
+    <hr>
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button (click)="botaoClicado()" class="btn btn-primary">Me clique!</button>
+            <br><br>
+            <input type="text"
+                (keyup)="onKeyUp($event)"
+                (keyup.enter)="salvarValor($event.target.value)" 
+                (blur)="salvarValor(campoInput.value)"
+                #campoInput />
+
+            <p>Valor atual: {{ valorAtual  }}</p>
+            <p>Valor salvo: {{ valorSalvo  }}</p>
+            <span 
+                (mouseover)="onMouseOverOut()"  
+                (mouseout)="onMouseOverOut()" 
+                [class.higligth]="isMouseOver">
+                Passe o mouse sobre mim...
+            </span>
+        </div>
+    </article>
+</section>
+
+
+
+
+<hr>
+<section class="two-way-binding">
+    <article>
+        <h3>Two way data binding</h3>
+        <div>
+
+            <input type="text"
+                [value]="nome"
+                (input)="nome = $event.target.value"
+            >
+
+            <input type="text"
+                [ngModel]="nome"
+                (ngModelChange)="nome = $event"
+            >
+
+            <input type="text" [(ngModel)]="nome">
+            
+            <input type="text" bindon-ngModel="nome">
+
+            <p>Você digitou: {{nome}} </p>
+
+            <br>
+
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+
+            <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos de idade.</p>
+
+
+        </div>
+    </article>
+</section>
+
+-->
+
+<div class="alert" role="alert">Beleza</div>
+
+
+<hr>
+<article>
+    <h3>Class Binding</h3>
+    <div>
+        Selecione uma classe:
+        <select #vClasse (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Info</option>
+            <option value="alert-warning">Alerta</option>
+            <option value="alert-danger">Erro</option>
+        </select>
+        <div class="alert " role="alert" [class.alert-success]="vClasse.value == 'alert-success'">
+            Sucesso
+        </div>
+        <div class="alert " role="alert" [class.alert-info]="vClasse.value == 'alert-info'">
+            Info
+        </div>
+        <div class="alert " role="alert" [class.alert-warning]="vClasse.value == 'alert-warning'">
+            Alerta
+        </div>
+        <div class="alert " role="alert" [class.alert-danger]="vClasse.value == 'alert-danger'">
+            Erro
+        </div>
+
+        <br>
+        <div class={{vClasse.value}} role="alert">
+            Texto colorido conforme select do combo...
+        </div>
+
+
+    </div>
+</article>
+

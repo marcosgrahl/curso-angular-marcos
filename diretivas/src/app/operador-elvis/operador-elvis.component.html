@@ -1,0 +1,13 @@
+<h1>#31 operador-elvis works!</h1>
+<hr>
+<p>Descrição .: {{tarefa.desc}}</p>
+<!-- <p>Responsável: {{tarefa.resp.nome}}</p> este gera erro no browse-->
+<p>Método 1 para resolver o problema:</p>
+<p>Responsável: {{ tarefa.resp != null ? tarefa.resp.nome : 'tbd'}}</p>
+<hr>
+<p>Método 2 para resolver o problema, usando apenas o perador elvis ?:</p>
+<p>Responsável: {{ tarefa.resp?.nome}}</p>
+<br>
+<p>Resp. codigo: {{ tarefa.resp?.codigo}}</p>
+<p>Resp. usuário: {{ tarefa.resp?.usuario}}</p>
+

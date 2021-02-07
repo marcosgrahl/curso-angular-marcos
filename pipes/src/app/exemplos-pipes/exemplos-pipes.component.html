@@ -1,0 +1,63 @@
+<h3>#43-exemplos de Pipes</h3>
+<h3>#44-Pipes customizados</h3>
+<h3>#45-Pipes locate</h3>
+<h3>precisa importar o CommonModule do @angular/common</h3>
+<hr>
+
+<!--
+    pipe customizado CamelCasePipe não funcionou !!!
+    <p>Título: {{ livro.titulo | uppercase | CamelCasePipe }}</p>
+-->
+
+<p>Título: {{ livro.titulo | uppercase }}</p>
+<p>Estrela: {{ livro.rating | number:'2.1-2'}}</p>
+<p>Páginas: {{ livro.numeroPaginas | number}}</p>
+<p>Preço: {{ livro.preco | currency:'BRL' }}</p>
+<p>Data lançamento: {{livro.dataLancamento | date:'dd-MMM-yyyy' | uppercase}}</p>
+<p>Data lançamento: {{livro.dataLancamento }}</p>
+<p>Url: {{livro.url}}</p>
+<br>
+<p>Livro: {{livro | json}}</p>
+<hr>
+
+<h3>#46-Pipes puros</h3>
+Filtro:<input type="text" [(ngModel)]="filtro"   >
+<br>
+
+<input type="text" #novoValor>
+<button (click)="addCurso(novoValor.value)">Add curso</button>
+
+<ul>
+    <li *ngFor="let i of livros | filtroArray:filtro">
+        Livro: {{i}}
+    </li>
+</ul>
+
+<hr>
+<h3>#47-Pipes impuros</h3>
+<ul>
+    <li *ngFor="let i of livros | filtroArrayImpuro:filtro">
+        Livro: {{i}}
+    </li>
+</ul>
+
+<hr>
+<h3>Maneira correta de fazer filtro com array</h3>
+<ul>
+    <li *ngFor="let i of obterCursos()">
+        Livro: {{i}}
+    </li>
+</ul>
+
+
+<hr>
+<h3>#48-Pipes async</h3>
+
+<p>{{ valorAsync | json }}</p>
+<br>
+<p>usando Promise: {{ valorAsync | async}}</p>
+
+<!--
+    NÃO FUNCINOU
+    <p>usando Observable: {{ valorAsync | async2}}</p>
+-->

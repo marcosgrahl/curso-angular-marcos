@@ -1,0 +1,22 @@
+<h3>Para funcionar os link, descomentar o link rel stylesheet no arquivo index.html</h3>
+<hr>
+<h1>usando o binding</h1>
+<h2>
+    <i class="glyphicon"
+    [class.glyphicon-star-empty]="!meuFavorito"
+    [class.glyphicon-star]      ="meuFavorito"
+    (click)="fClickFavorito()"
+    ></i>
+</h2>
+
+<hr>
+<h1>Agora usando ngClass</h1>
+<h2>
+    <i class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star-empty': !meuFavorito,
+        'glyphicon-star':        meuFavorito
+    }"
+    (click)="fClickFavorito()"
+    ></i>
+</h2>

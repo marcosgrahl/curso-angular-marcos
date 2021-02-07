@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "grahl-app-request"
+  },
+  "targets": {
+    "grahl-app-request": {
+      "hosting": {
+        "request-http": [
+          "grahl-app-request"
+        ]
+      }
+    }
+  }
+}

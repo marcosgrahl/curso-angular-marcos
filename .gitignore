@@ -1,0 +1,13 @@
+# dependencies
+/crud/node_modules
+/data-binding/node_modules
+/diretivas/node_modules
+/forms/node_modules
+/hello-typescript/node_modules
+/lib-lodash/node_modules
+/lib-materialize/node_modules
+/pipes/node_modules
+/primeiro-projeto/node_modules
+/request-http/node_modules
+/rotas/node_modules
+/servicos/node_modules

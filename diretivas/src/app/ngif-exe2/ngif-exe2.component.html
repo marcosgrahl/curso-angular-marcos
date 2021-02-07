@@ -1,0 +1,27 @@
+<h2>diretiva *ngif exemplo 2</h2>
+
+<div *ngIf="cursos.length > 0">
+    Lista de cursos
+</div>
+
+<div *ngIf="cursos.length == 0">
+    Nenhum Curso
+</div>
+
+<br>
+<button (click)="fMostraTot()">Mostrar Total</button>
+<div *ngIf="mostrarTotal">
+    <br>
+    O Total de cursos é {{cursos.length}}
+    <br>
+</div>
+
+<hr>
+<h1>Alternativa usando o hidden do html, contudo é menso seguro</h1>
+<br>
+<button (click)="fMostraTot()">Mostrar Total</button>
+<div [hidden]="!mostrarTotal">
+    <br>
+    O Total de cursos é {{cursos.length}}
+    <br>
+</div>

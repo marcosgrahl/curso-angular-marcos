@@ -1,0 +1,20 @@
+<h1>
+    <ng-content select=".aula2"></ng-content>
+</h1>
+<h2>Compartihando um serviço entre components</h2>
+<hr>
+
+<input type="text" #cursoInput>
+<button (click)="onAddCurso(cursoInput.value)" >Adiciona Curso</button>
+
+<h5>
+    Lista de Cursos (criar-cursos.component)
+</h5>
+
+<ul>
+    <li *ngFor="let cur of cursos, let idx = index">
+        {{idx}} {{cur}}
+    </li>
+</ul>
+
+<app-receber-curso-criado></app-receber-curso-criado>

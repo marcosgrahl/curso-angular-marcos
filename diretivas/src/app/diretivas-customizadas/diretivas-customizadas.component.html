@@ -1,0 +1,42 @@
+<h1>
+    <ng-content select=".aula"></ng-content>
+</h1>
+
+<hr>
+<p>#33: ElementRef  e Renderer2</p>
+<p style="background-color: yellow;">Fundo Amarelo por style</p>
+<!--Precisa inclur a classe do componente ElementRef-->
+<p FundoAmarelo>
+    Fundo Amarelo usando diretivas customizada
+</p>
+<hr>
+<p>#34: HostListener e HostBinding</p>
+<p HighLigthMouse>
+    Texto com highlight quando passo o mouse.
+</p>
+
+<hr>
+<p>#35: Input and Property binding</p>
+<!--Precisa inclur a classe do componente Input-->
+<!--
+<p Highlight [corRealce]="'red'" [corPadrao]="'gray'">
+    Texto com highlight quando passo o mouse.
+</p>
+-->
+<p [Highlight]="'red'" [corPadrao]="'gray'">
+    o Higliht neste exemplo é tanto uma diretiva, quanto um imput property
+</p>
+
+<hr>
+<p>#36: Criando diretiva customizada ngElse</p>
+
+<div *ngIf="mostrarCursos">
+    Lista de cursos aqui.
+</div>
+
+<div *ngElse="mostrarCursos">
+    Não existem cursos para serem listados.
+</div>
+
+<br>
+<button (click)="fMostraCursos()">Mostrar Cursos</button>

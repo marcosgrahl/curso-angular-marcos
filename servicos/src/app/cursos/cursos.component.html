@@ -1,0 +1,13 @@
+<h1>
+    <ng-content select=".aula"></ng-content>
+</h1>
+<hr>
+
+<h5>
+    Lista de Cursos (cursos.component)
+</h5>
+<ul>
+    <li *ngFor="let cur of cursos, let idx = index">
+        {{idx}} {{cur}}
+    </li>
+</ul>

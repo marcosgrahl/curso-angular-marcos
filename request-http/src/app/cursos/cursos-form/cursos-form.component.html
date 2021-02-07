@@ -1,0 +1,24 @@
+<form class="row g-3 needs-validation" novalidate [formGroup]="form" style="padding-top: 10px">
+  <div class="col-md-12">
+    <label for="validationCustom01" class="form-label">Nome do curso</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      placeholder="Informe o nome do curso"
+      formControlName="nome"
+      [ngClass]="{ 'is-invalid': sobmetido && temErro('nome') }"
+    />
+    <div class="invalid-feedback" *ngIf="temErro('nome') && temErro('nome')['required']">
+       * Nome do curso é obrigatório.
+    </div>
+    <div class="invalid-feedback" 
+      *ngIf="temErro('nome') && temErro('nome').minlength?.actualLength < temErro('nome').minlength?.requiredLength">
+      * Nome precisa ter no mínimo {{temErro('nome').minlength.requiredLength}} caracteres.
+   </div>
+</div>
+  <div style="margin-top: 10px; margin-left: 13px;">
+     <button type="submit"  class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+     <button type="button"  class="btn btn-default" (click)="onCancel()">Cancelar</button>
+  </div>
+</form>

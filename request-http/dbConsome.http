@@ -1,0 +1,29 @@
+
+### metódo get geral
+http://localhost:3000/cursos
+
+
+### metódo get específico
+GET http://localhost:3000/cursos/2
+
+
+### método post
+POST http://localhost:3000/cursos HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "JAVAScript"
+}
+
+
+### método put
+PUT http://localhost:3000/cursos/2 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Java Script"
+}
+
+
+### método delete
+DELETE http://localhost:3000/cursos/3 HTTP/1.1

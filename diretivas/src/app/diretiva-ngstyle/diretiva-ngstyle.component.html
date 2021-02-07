@@ -1,0 +1,32 @@
+<p>Para usar o ngModel com input, precisa importar FormsModule da classe angular/forms no app.module.ts</p>
+<hr>
+<h2>usando o style binding</h2>
+<button
+    [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+    [style.color]="ativo ? 'white' : 'black'"
+    [style.font-weight]="ativo ? 'bold' : 'normal' "
+    [style.font-size]="tamFonte + 'px'"
+    (click)="fClick()"
+>
+Mudar atributo 'ativo'
+</button>
+<br>
+<input type="text" [(ngModel)]="tamFonte">
+<p>Você digitou: {{tamFonte}} </p>
+
+<hr>
+<h2>Usando agora o ngStyle</h2>
+<button
+    [ngStyle]="{
+        'backgroundColor': (ativo ? 'blue' : 'gray'),
+        'color': (ativo ? 'white' : 'black'),
+        'font-weight': (ativo ? 'bold' : 'normal'),
+        'font-size': tamFonte + 'px'
+    }"
+    (click)="fClick()"
+>
+Mudar atributo 'ativo'
+</button>
+<br>
+<input type="text" [(ngModel)]="tamFonte">
+<p>Você digitou: {{tamFonte}} </p>

@@ -1,0 +1,12 @@
+p,
+h1,
+h2,
+h3,
+div {
+    margin: 3px;
+}
+
+.higligth {
+    background-color: yellowgreen;
+    font-weight: bold;
+}

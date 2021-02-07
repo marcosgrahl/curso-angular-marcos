@@ -1,0 +1,39 @@
+<div class="container search-table">
+  <div class="search-box">
+    <div class="row">
+      <div class="col-md-9">
+        <input
+          type="text"
+          id="myInput"
+          class="form-control"
+          [formControl]="queryField"
+          placeholder="Pesquisar em libs"
+        />
+      </div>
+      <div class="col-auto">
+         <button class="btn btn-lg btn-success" (click)="onSearch()">
+            Pesquisar
+         </button>         
+      </div>
+    </div>
+  </div>
+  <div class="search-list">
+    <h3>{{ total }} registros encontrados</h3>
+    <table class="table" id="myTable">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>homepage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results$ | async">
+          <td>{{ result.name }}</td>
+          <td>
+            <a class="nav-link" [href]="[result.homepage]" [target]="'_blank'">{{ result.homepage }}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
